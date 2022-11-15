@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inter-Tour</title>
+    <link rel="icon" href="image/earth.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <span><a href="../site.html">Inter-Tour</a></span>
+        </div>
+
+        <div id="about">
+            <div id="dropdown-nav">
+                <button class="navigation">Навигация</button>
+                <div id="dropdown-menu">
+                    <a href="../Tours/site.html">Туры</a>
+                    <a href="../Feedback/site.html">Отзывы</a>
+                    <a href="../About/site.html">О нас</a>
+                    <a href="../Sign/site.html">Регистрация</a>
+                    <a href="../Sign/site.html">Вход</a>
+                </div>
+            </div>
+            <div id="navbar">
+                <div id="dropdown">
+                    <button id="dropbtn"><a href="../Tours/site.html">Туры</a></button>
+                    <div id="dropdown-content">
+                        <a id="australia" href="razrabotka.html">Австралия</a><br>
+                        <a id="asia" href="razrabotka.html">Азия</a><br>
+                        <a id="africa" href="razrabotka.html">Африка</a><br>
+                        <a id="europe" href="razrabotka.html">Европа</a><br>
+                        <a id="north-america" href="razrabotka.html">Северная Америка</a><br>
+                        <a id="south-america" href="razrabotka.html">Южная Америка</a><br>
+
+
+                    </div>
+                </div>
+                <a id="nav-item" href="../Feedback/site.html">Отзывы</a>
+                <a id="nav-item" href="../About/site.html">О нас</a>
+            </div>
+        </div>
+        <button id="signin"><a id="nav-item-sign" href="../Sign/site.html">Войти</a></button>
+    </header>
+
+    <div id="tour">
+        <h1>Направления</h1>
+        <div class="img">
+            <img src="image/australia.jpg" alt="australia">
+            <span>Австралия-это страна-материк. это дикие животные которых больше нигде не увидите кроме как тут.</span>
+            <div>
+                <a class="btn btn-secondary" href="#">Подробнее</a>
+            </div>
+        </div>
+        <div class="img">
+            <img src="image/asia.jpg" alt="asia">
+            <span>Азия-часть земного шара на которой живет основаная масса человечества, но это не единсвенное что можно увидеть в азии. </span>
+            <div>
+                <a class="btn btn-secondary" href="#">Подробнее</a>
+            </div>
+        </div>
+        <div class="img">
+            <img src="image/africa.png" alt="africa">
+            <span>Вечно палящее солнце, бескрайные пески, сильнозагоревшие люди-это про Африку.</span>
+            <div>
+                <a class="btn btn-secondary" href="#">Подробнее</a>
+            </div>
+        </div>
+        <div class="img">
+            <img src="image/europe.png" alt="europe">
+            <span>Путешествовать на машине и увидеть 50 стран за короткий промежуток времени, это невероятно-это Европа.</span>
+            <div>
+                <a class="btn btn-secondary" href="#">Подробнее</a>
+            </div>
+        </div>
+        <div class="img">
+            <img src="image/north-america.png" alt="north-america">
+            <span>Что вы представляете когда слышите Северная Америка?Да,это великолепные Соединенные Штаты, неменее чудесная Канада , а также жаркая Мексика и другие прекрасные стараны.</span>
+            <div>
+                <a class="btn btn-secondary" href="#">Подробнее</a>
+            </div>
+        </div>
+        <div class="img">
+            <img src="image/south-america.png" alt="south-america">
+            <span>Ох уж эта Южная Америка, Бразильские карнавалы, запах свеже обжаренной Арабики , повсюду испанский язык </span>
+            <div>
+                <a class="btn btn-secondary" href="#">Подробнее</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+
+        <div class="footer-left">
+            <h3>Inter-Tour </h3><br>
+            <p class="footer-company-name">Inter-Tour&copy; 2021</p><br>
+            <div id="ontop" onclick="slowScroll('#tour')">
+                <p onclick="slowScroll('#tour')">ON TOP</p>
+            </div>
+        </div>
+
+        <div class="footer-center">
+            <div class="map">
+                <img src="image/map.png" class="image">
+                <p>Республика Молдова<br> г.Кишинев
+                    <br> ул.Пушкина 28
+                </p>
+            </div>
+            <div class="phone">
+                <img src="image/phone.png" class="image">
+                <p>+373 (022)864 511</p>
+            </div>
+            <div class="mail">
+                <img src="image/mail.png" class="image">
+                <p>inter-tour.gmail.com</p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <p class="footer-net">
+                <span>Соц сети</span> Также вы можете следить за новостями в следующих соц сетях
+            </p>
+
+            <div class="footer-icons">
+                <a class="facebook" href="https://www.facebook.com"><img src="image/facebook.png" class="image"></a>
+                <a class="instagram" href="https://www.instagram.com"><img src="image/inst.png" class="image"></a>
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        $(document).on("scroll", function() {
+            if ($(window).scrollTop() === 0)
+                $("header").removeClass("fixed");
+            else
+                $("header").attr("class", "fixed");
+        });
+
+        function slowScroll(ontop) {
+            $('html,body').animate({
+                scrollTop: $(ontop).offset().top
+            }, 500);
+        }
+    </script>
+</body>
+
+</html>
